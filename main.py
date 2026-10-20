@@ -4,9 +4,8 @@ import psycopg
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-# ⚠️ Пока всё зашито прямо в код — это и предстоит исправить.
-DATABASE_URL = "postgresql://guestbook:supersecret123@localhost:5432/guestbook"
-GREETING = "Добро пожаловать в гостевую книгу!"
+from dotenv import DATABASE_URL
+from dotenv import GREETING
 
 
 def connect():
